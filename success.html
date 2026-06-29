@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're In — Rad Humans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --violet: #6D28D9;
+      --violet-dark: #4C1D95;
+      --violet-deep: #1E0A3C;
+      --fuchsia: #C026D3;
+      --fuchsia-bright: #E879F9;
+      --rose-warm: #FF2D78;
+      --lavender: #F5F3FF;
+      --cream: #FFFDF7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--violet-deep);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 48px;
+    }
+    .logo span { color: var(--fuchsia-bright); }
+    .emoji { font-size: 4rem; margin-bottom: 28px; }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    h1 span { color: var(--fuchsia-bright); }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+      max-width: 500px;
+      margin: 0 auto 16px;
+    }
+    .highlight {
+      display: inline-block;
+      background: rgba(232,121,249,0.15);
+      border: 1px solid rgba(232,121,249,0.3);
+      border-radius: 12px;
+      padding: 20px 28px;
+      margin: 32px auto;
+      max-width: 480px;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.85);
+    }
+    .highlight strong { color: var(--fuchsia-bright); }
+    .back-link {
+      margin-top: 40px;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: rgba(255,255,255,0.8); }
+  </style>
+</head>
+<body>
+  <div class="logo">RAD<span>HUMANS</span></div>
+  <div class="emoji">🔑</div>
+  <h1>You're <span>In.</span></h1>
+  <p>You just became a founding member. That matters. You committed before the doors were even open.</p>
+  <div class="highlight">
+    <strong>What happens next:</strong><br>
+    Watch your inbox. The moment we go live, you'll be the first to know — and you'll have instant access to everything inside the portal, plus your founding member bonus.
+  </div>
+  <p>You're never ready till you do it.<br>You just did it.</p>
+  <a href="https://radhumans.com" class="back-link">← Back to radhumans.com</a>
+</body>
+</html>
