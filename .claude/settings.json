@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'SYSTEM REMINDER: Before doing anything else this turn, if you have not already read it in this conversation, read /Users/svetlanasaitsky/Documents/RAD BRAIN/Website/STATUS_RADHUMANS.md (this sites status doc) and /Users/svetlanasaitsky/Documents/RAD BRAIN/Website/PLATFORMS.md (shared platforms list). This applies whether this is a brand-new chat or you are returning to an existing chat after any gap in time -- do not assume your prior context in this chat is still current.'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'SYSTEM REMINDER: If this session made any real change (code, content, decisions, new accounts/platforms, status changes), update /Users/svetlanasaitsky/Documents/RAD BRAIN/Website/STATUS_RADHUMANS.md (and PLATFORMS.md if a new platform was involved) before ending. Do this now if you have not already.'"
+          }
+        ]
+      }
+    ]
+  }
+}
