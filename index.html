@@ -335,6 +335,8 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 24px 60px rgba(109,40,217,0.25);
+      cursor: pointer;
+      background: var(--violet-deep);
     }
     .video-wrapper-vertical iframe {
       position: absolute;
@@ -342,6 +344,27 @@
       width: 100%; height: 100%;
       border: 0;
     }
+    .video-cover-img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-play-button {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px; height: 64px;
+      background: var(--rose-warm);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s;
+    }
+    .video-wrapper-vertical:hover .video-play-button { transform: translate(-50%, -50%) scale(1.08); }
+    .video-play-button svg { width: 24px; height: 24px; fill: #fff; margin-left: 4px; }
 
     /* ── STORY ── */
     #story { background: var(--lavender-mid); }
@@ -746,8 +769,11 @@
   <div class="container">
     <div class="section-label">Hear It Straight</div>
     <h2>One Take.<br>The Whole Story.</h2>
-    <div class="video-wrapper-vertical">
-      <iframe src="https://www.youtube.com/embed/WPdawamb3OA" title="I built 5 websites in 2 months on a mountaintop" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="video-wrapper-vertical" id="video-cover-wrapper" onclick="playHeroVideo()">
+      <img src="assets/youtube-cover.jpg" alt="I wasn't a tech person. Until I was." class="video-cover-img" />
+      <div class="video-play-button">
+        <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
+      </div>
     </div>
   </div>
 </section>
@@ -1190,6 +1216,12 @@
     if (img.complete && img.naturalWidth > 0) hidePlaceholder();
     else img.addEventListener('load', hidePlaceholder);
   });
+
+  function playHeroVideo() {
+    const wrapper = document.getElementById('video-cover-wrapper');
+    wrapper.onclick = null;
+    wrapper.innerHTML = '<iframe src="https://www.youtube.com/embed/WPdawamb3OA?autoplay=1" title="I built 5 websites in 2 months on a mountaintop" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>';
+  }
 
   function openPayModal() {
     document.getElementById('pay-modal').classList.add('open');
