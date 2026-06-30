@@ -59,16 +59,17 @@
     }
     .nav-logo span { color: var(--fuchsia); }
     .nav-cta {
-      background: var(--violet);
-      color: #fff;
-      padding: 10px 22px;
+      background: transparent;
+      color: var(--violet-deep);
+      border: 1.5px solid var(--violet);
+      padding: 7px 16px;
       border-radius: 100px;
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       font-weight: 600;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
     }
-    .nav-cta:hover { background: var(--violet-dark); }
+    .nav-cta:hover { background: var(--violet); color: #fff; }
 
     /* ── HERO ── */
     #hero {
@@ -85,9 +86,9 @@
       display: inline-block;
       background: var(--violet-deep);
       color: var(--fuchsia-bright);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 6px 16px;
       border-radius: 100px;
@@ -95,12 +96,12 @@
     }
     .hero-headline {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3.5rem, 10vw, 8rem);
-      line-height: 0.95;
-      letter-spacing: 0.02em;
+      font-size: clamp(4.4rem, 16vw, 10rem);
+      line-height: 0.92;
+      letter-spacing: 0.01em;
       color: #fff;
       max-width: 900px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .hero-headline .accent { color: var(--fuchsia-bright); }
     .hero-sub {
@@ -108,21 +109,21 @@
       line-height: 1.7;
       max-width: 600px;
       color: rgba(255,255,255,0.85);
-      margin-bottom: 48px;
+      margin-bottom: 36px;
       font-weight: 400;
     }
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
       justify-content: center;
     }
     .btn-primary {
       background: var(--rose-warm);
       color: #fff;
-      padding: 18px 36px;
+      padding: 13px 26px;
       border-radius: 100px;
-      font-size: 1rem;
+      font-size: 0.875rem;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
@@ -140,12 +141,12 @@
     .btn-ghost {
       background: transparent;
       color: #fff;
-      padding: 18px 36px;
+      padding: 13px 26px;
       border-radius: 100px;
-      font-size: 1rem;
+      font-size: 0.875rem;
       font-weight: 600;
       text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.5);
+      border: 1.5px solid rgba(255,255,255,0.5);
       transition: background 0.15s, border-color 0.15s;
       cursor: pointer;
       font-family: inherit;
@@ -155,6 +156,9 @@
       margin-top: 18px;
       font-size: 0.8rem;
       color: rgba(255,255,255,0.45);
+    }
+    @media (max-width: 480px) {
+      .btn-primary, .btn-ghost { padding: 11px 20px; font-size: 0.8rem; }
     }
 
     /* ── SECTION BASE ── */
@@ -715,16 +719,17 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-label">AI for Humans. By a Very Human Human.</div>
   <h1 class="hero-headline">
     BUILD YOUR<br>
     <span class="accent">UNIVERSE.</span>
   </h1>
+  <div class="hero-label">AI for Humans. Created by a Very Human Human.</div>
   <p class="hero-sub">
-    In under two months, I built five websites on a mountaintop in Guatemala.
-    I had always told myself I wasn't a tech person. And there I was, being the creator
-    and becoming the developer. I'm still kind of in awe of that. Sharing is caring, and
-    this was too valuable to keep to myself. So if any of this resonates, I'm teaching you everything.
+    I'm going to bottom line it: I never thought this was the thing I was going to build.
+    But that's kind of the point. On a mountaintop in Guatemala, underneath a full moon, I realized
+    I was the creator becoming the developer too. It was so incredible that I knew I had to share it.
+    So I'm sharing everything that helped me build five websites in two months and get past so many
+    of my own mental blocks. I'll teach everything. Take what resonates, leave the rest.
   </p>
   <div class="hero-buttons">
     <button class="btn-primary" onclick="openPayModal()">
